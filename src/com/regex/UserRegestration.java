@@ -29,10 +29,18 @@ public class UserRegestration {
 	            System.out.println("invalid input");
 	        }
 	    }
-	    public static void verifyPhoneNumber(String phnum){
+	    public static void PhoneNumber(String phnum){
 	        boolean verify = Pattern.matches("^[+](91)[6-9][0-9]{9}$", phnum);
 	        if (verify){
 	            System.out.println("phone number : "+ phnum + " valid");
+	        }else {
+	            System.out.println("invalid input");
+	        }
+	    }
+	    public static void Password(String password1){
+	        boolean verify = Pattern.matches("^[A-Za-z0-9]{8,}$", password1);
+	        if (verify){
+	            System.out.println("Password : "+ password1 + " valid");
 	        }else {
 	            System.out.println("invalid input");
 	        }
@@ -58,7 +66,12 @@ public class UserRegestration {
 	        System.out.print("Phone number: ");
 	        String phnum = sc.next();
 
-	        verifyPhoneNumber(phnum);
+	        PhoneNumber(phnum);
+	        
+	        System.out.println("password:");
+	        String password1 = sc.next();
+	        Password(password1);
+	        
 
 	        
 	        
