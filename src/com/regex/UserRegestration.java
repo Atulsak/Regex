@@ -5,8 +5,21 @@ import java.util.regex.Pattern;
 
 public class UserRegestration {
 
-	 public static boolean verifyFirstName(String firstName){
-	        return (Pattern.matches("^[A-Z][a-z]{2,}$", firstName));
+	 public static void FirstName(String firstName){
+	        boolean verify = (Pattern.matches("^[A-Z][a-z]{2,}$", firstName));
+	        if (verify){
+	            System.out.println("input is valid "+ firstName);
+	        }else {
+	            System.out.println("input is invalid");
+	        }
+	    }
+	    public static void LastName(String LastName){
+	        boolean verify = (Pattern.matches("^[A-Z][a-z]{2,}$", LastName));
+	        if (verify){
+	            System.out.println("valid "+ LastName);
+	        }else {
+	            System.out.println("invalid");
+	        }
 	    }
 	    public static void main(String[] args) {
 	        System.out.println("Welcome to the User Registration Problem...!!!");
@@ -15,11 +28,11 @@ public class UserRegestration {
 	        System.out.print("Please enter the First Name :: ");
 	        String firstName = sc.next();
 
-	        if (verifyFirstName(firstName)){
-	            System.out.println("input is valid "+ firstName);
-	        }else {
-	            System.out.println("input is invalid");
-	        }
-	    }
+	        FirstName(firstName);
 
+	        System.out.print("Please enter the Last Name :: ");
+	        String lastName = sc.next();
+
+	        LastName(lastName);
+	    }
 }
