@@ -53,6 +53,14 @@ public class UserRegestration {
 	            System.out.println("invalid input");
 	        }
 	    }
+	    public static void Password3(String passwordrule3){
+	        boolean verify = Pattern.matches("^[a-z]{8}[A-Z]{1}[0-9]{1}$", passwordrule3);
+	        if (verify){
+	            System.out.println("Password : "+ passwordrule3 + " valid");
+	        }else {
+	            System.out.println("invalid input");
+	        }
+	    }
 	    public static void main(String[] args) {
 	        System.out.println("Welcome to the User Registration Problem");
 	        Scanner sc = new Scanner(System.in);
@@ -82,7 +90,8 @@ public class UserRegestration {
 	        
            System.out.println("password");
            String passwwordrul2 = sc.next();
-           Password2(passwwordrul2);
+          
+           
 	        
 	    }
 }
