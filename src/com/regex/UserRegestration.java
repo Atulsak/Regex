@@ -16,9 +16,17 @@ public class UserRegestration {
 	    public static void LastName(String LastName){
 	        boolean verify = (Pattern.matches("^[A-Z][a-z]{2,}$", LastName));
 	        if (verify){
-	            System.out.println("valid "+ LastName);
+	            System.out.println("input is valida "+ LastName);
 	        }else {
-	            System.out.println("invalid");
+	            System.out.println("invalid input");
+	        }
+	    }
+	    public static void Email(String email){
+	        boolean verify = (Pattern.matches("^[A-za-z]+([_+-.][a-zA-Z])*[@][a-zA-Z]+[.][a-z]{2,3}([.][a-z]{2})*$", email));
+	        if (verify){
+	            System.out.println("Entered "+ email + " is valid");
+	        }else {
+	            System.out.println("invalid input");
 	        }
 	    }
 	    public static void main(String[] args) {
@@ -34,5 +42,10 @@ public class UserRegestration {
 	        String lastName = sc.next();
 
 	        LastName(lastName);
+
+	        System.out.print("Please enter the Email :: ");
+	        String email = sc.next();
+
+	        Email(email);
 	    }
 }
