@@ -29,23 +29,37 @@ public class UserRegestration {
 	            System.out.println("invalid input");
 	        }
 	    }
+	    public static void verifyPhoneNumber(String phnum){
+	        boolean verify = Pattern.matches("^[+](91)[6-9][0-9]{9}$", phnum);
+	        if (verify){
+	            System.out.println("phone number : "+ phnum + " valid");
+	        }else {
+	            System.out.println("invalid input");
+	        }
+	    }
 	    public static void main(String[] args) {
-	        System.out.println("Welcome to the User Registration Problem...!!!");
+	        System.out.println("Welcome to the User Registration Problem");
 	        Scanner sc = new Scanner(System.in);
 
-	        System.out.print("Please enter the First Name :: ");
+	        System.out.print("First Name : ");
 	        String firstName = sc.next();
 
 	        FirstName(firstName);
 
-	        System.out.print("Please enter the Last Name :: ");
+	        System.out.print("Last name : ");
 	        String lastName = sc.next();
 
 	        LastName(lastName);
 
-	        System.out.print("Please enter the Email :: ");
+	        System.out.print(" Email id : ");
 	        String email = sc.next();
 
 	        Email(email);
+	        System.out.print("Phone number: ");
+	        String phnum = sc.next();
+
+	        verifyPhoneNumber(phnum);
+
+	        
 	    }
 }
