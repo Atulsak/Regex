@@ -29,4 +29,5 @@ public class UserRegrstrationTest extends UserRegrstration {
 	        Assert.assertEquals(true, Password("01@abcdefgh") );
 	    }
 
+	    
 }
